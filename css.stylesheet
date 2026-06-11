@@ -1,0 +1,278 @@
+/* --- Variablen für die Farbpalette --- */
+:root {
+    --bg-cream: #FFF3E8;
+    --card-cream: #FFF9F4;
+    --text-brown: #5C4033;
+    --text-light: #8A6E63;
+    --pink-primary: #F07CA0;
+    --pink-light: #FFC4D1;
+    --teal-primary: #6DC4B0;
+    --teal-light: #BBE5ED;
+    --peach-banner: #F5C5A3;
+    --heart-red: #FF7B8E;
+}
+
+/* --- Globale Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-brown);
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heart {
+    color: var(--heart-red);
+}
+
+.teal-text {
+    color: var(--teal-primary) !important;
+}
+
+/* --- Header & Logo Bereich --- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+.logo-container {
+    text-align: center;
+    background: radial-gradient(circle, #fff 0%, transparent 70%);
+    padding: 3rem;
+    border-radius: 50%;
+}
+
+.logo-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+}
+
+.pink-text {
+    color: var(--pink-primary);
+    display: block;
+}
+
+.logo-title .teal-text {
+    color: var(--teal-primary);
+    display: block;
+    margin-left: 2rem;
+}
+
+.logo-banner {
+    background-color: var(--peach-banner);
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+/* Dekorative Badges (links und rechts) */
+.badge {
+    position: absolute;
+    background-color: var(--teal-light);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 3px dashed white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.badge-left {
+    left: 5%;
+    top: 10%;
+    background-color: var(--teal-light);
+}
+
+.badge-right {
+    right: 5%;
+    top: 20%;
+    background-color: #FDE8E8; /* Zartrosa für den rechten Badge */
+}
+
+/* --- Layout Speisekarte --- */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-cream);
+    border: 2px solid var(--peach-banner);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+/* --- Ribbons / Überschriften --- */
+.ribbon {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: -3rem auto 2rem auto; /* Zieht das Ribbon nach oben auf den Rand */
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    width: max-content;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: relative;
+    background-color: white;
+}
+
+.ribbon-pink {
+    background-color: var(--pink-light);
+    color: var(--text-brown);
+}
+
+.ribbon-teal {
+    background-color: var(--teal-light);
+    color: var(--text-brown);
+}
+
+/* --- Menü-Einträge --- */
+.menu-item {
+    margin-bottom: 1.2rem;
+}
+
+.item-header {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.item-name {
+    flex-shrink: 0;
+}
+
+/* Dynamische Pünktchen-Linie zwischen Name und Preis */
+.dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted var(--text-light);
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+.item-price {
+    flex-shrink: 0;
+}
+
+.item-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.2rem;
+}
+
+/* Spezielle Hinweise in den Boxen */
+.preorder-notice {
+    text-align: center;
+    background-color: var(--bg-cream);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px dashed var(--peach-banner);
+}
+
+.footer-quote {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--pink-primary);
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.legal-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: var(--pink-primary);
+    text-decoration: underline;
+}
+
+/* --- Responsive Design für Smartphones --- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .badge {
+        position: static;
+        margin: 1rem auto;
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-title {
+        font-size: 4rem;
+    }
+    
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}
